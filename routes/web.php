@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KeselamatanInteligenController;
+use App\Http\Controllers\PengurusanBanduanController;
+use App\Http\Controllers\TahananRadikalController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +34,18 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index']);
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });
+
+Route::get('/KeselamatanKoreksional/index', function () {
+    return view('KeselamatanKoreksional.index');
+});
+
+Route::get('/KeselamatanKoreksional/index', function () {
+    return view('KeselamatanKoreksional.index');
+});
+
+Route::get('KeselamatanKoreksional/PengurusanBanduan', [PengurusanBanduanController::class, 'index']);
+Route::get('KeselamatanKoreksional/TahananRadikal', [TahananRadikalController::class, 'index']);
+Route::get('KeselamatanKoreksional/KeselamatanInteligen', [KeselamatanInteligenController::class, 'index']);
+
+
+

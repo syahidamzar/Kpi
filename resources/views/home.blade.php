@@ -25,4 +25,34 @@
 <div class="container">
    <h1> Welcome, {{ Auth::user()->name }}</h1>
 </div>
+
+<style>
+.container {
+  display: flex;
+}
+
+.box {
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  background-color: #3498db; /* Change color as desired */
+  color: #fff; /* Text color */
+  margin-right: 10px; /* Adjust spacing between boxes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 25px
+}
+
+</style>
+
+<div class="container">
+  <div class="box" onclick="window.location.href='/KeselamatanKoreksional/index'">Keselamatan dan Koreksional</div>
+  <div class="box" onclick="window.location.href='/page2'">Box 2</div>
+  <div class="box" onclick="window.location.href='/page3'">Box 3</div>
+</div>
+
+
+
 @endsection
