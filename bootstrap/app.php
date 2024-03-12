@@ -54,6 +54,3 @@ $app->singleton(
 
 return $app;
 
-
-
-//test app
